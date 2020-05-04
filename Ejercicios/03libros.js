@@ -1,4 +1,13 @@
-// Método 1: Arreglo de objetos
+    //Ejericio Libros
+
+    // Crea un arreglo de objetos, donde cada objeto describa
+    // un libro y tenga las propiedades para titulo(string),
+    // autor(string) y leido(booleano para indicar si se ha
+    // leido o no). Itera sobre el arreglo de libros, y por
+    // cada libro imprime el titulo y autor, junto con su
+    // status de lectura (si ya ha sido leído, o no).
+
+    // Método 1: Arreglo de objetos
 
 // let llano = {
 //     titulo: 'El llano en llamas',
@@ -51,7 +60,7 @@
 //         console.log('--------------------')
 //     }
 
-//Método 2: Arreglo de clases (usando constructor)
+    //Método 2: Arreglo de clases (usando constructor)
 
 class libro {
 
