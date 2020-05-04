@@ -1,10 +1,11 @@
-//Ejercicio RFC
-// Haz una clase llamada Persona que siga las siguientes condiciones:
-// 	 Sus atributos son: primer nombre,segundo nombre,Primer Apellido, Segundo Apellido ,fecha nacimiento, edad, RFC, genero, peso y altura.
-// 	 calcularIMC()
-// 	 esMayorDeEdad()
-// 	 El constructor pide  primer nombre,segundo nombre,Primer Apellido, Segundo Apellido ,fecha nacimiento, edad, genero, peso y altura.
-// 	 Generar el RFC a partir de el nombre, edad y genero
+    //Ejercicio RFC
+
+    // Haz una clase llamada Persona que siga las siguientes condiciones:
+    // 	 Sus atributos son: primer nombre,segundo nombre,Primer Apellido, Segundo Apellido ,fecha nacimiento, edad, RFC, genero, peso y altura.
+    // 	 calcularIMC()
+    // 	 esMayorDeEdad()
+    // 	 El constructor pide  primer nombre,segundo nombre,Primer Apellido, Segundo Apellido ,fecha nacimiento, edad, genero, peso y altura.
+    // 	 Generar el RFC a partir de el nombre, edad y genero
 
 class Persona {
 
