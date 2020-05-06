@@ -20,3 +20,4 @@ function atrapar(error,response,body){//Este es mi callback
 
 
 request('https://swapi.dev/api/people/', atrapar)
+
