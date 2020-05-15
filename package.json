@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/SaulSaVi/CRoja2020#readme",
   "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
     "request": "^2.88.2"
   }
 }
