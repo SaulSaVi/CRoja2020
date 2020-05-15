@@ -16,7 +16,7 @@ function CreateTodo(props) {
 
   const saveTodo = (event) => {
     event.preventDefault();
-    axios.post('https://todoapp-e1226.firebaseio.com/todos.json', 
+    axios.post('https://reactlearn-firebase.firebaseio.com/task.json', 
     { user,todo, prioridad}).then(() => {
       alert("Se a creado el Todo con exito")
       //clear()

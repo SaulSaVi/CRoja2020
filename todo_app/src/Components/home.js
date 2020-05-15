@@ -11,7 +11,7 @@ function Home(){
 
 
     useEffect(() => {
-        axios.get('https://todoapp-e1226.firebaseio.com/todos.json')
+        axios.get('https://reactlearn-firebase.firebaseio.com/task.json')
             .then((response) => {
                 console.log(response.data) //Esto me trajo firebase
                 const elements = Object.entries(response.data).reverse() //esto combierte objetos en arreglos
