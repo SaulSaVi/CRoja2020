@@ -15,6 +15,9 @@ function CardTodo(props){
             <div className="card-body">
                 <p className="card-text">{props.todo}</p>
             </div>
+            <div className = "card-footer text-center">
+                <button className = "btn btn-info">Editar</button>
+            </div>
         </div>
     )
 }
