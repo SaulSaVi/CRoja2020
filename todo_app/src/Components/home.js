@@ -2,16 +2,21 @@ import React, { useState, useEffect  } from 'react';
 import axios from 'axios';
 import CardTodo from './CardTodo';
 import Navbar from './Navbar';
+import ModalEdit from './ModalEdit';
+import ModalDelete from './ModalDelete';
 
 
 function Home(){
     const [todosAlta,setTodosAlta] = useState([])
     const [todosMedia,setTodosMedia] = useState([])
     const [todosBaja,setTodosBaja] = useState([])
+    const [isOpen,setIsOpen] = useState(false)
+    const [currentTodo,setCurrentTodo] = useState({})
+    const [isOpenDelete, setIsOpenDelete] = useState(false)
 
 
     useEffect(() => {
-        axios.get('https://reactlearn-firebase.firebaseio.com/task.json')
+        axios.get('https://todoapp-e1226.firebaseio.com/todos.json')
             .then((response) => {
                 console.log(response.data) //Esto me trajo firebase
                 const elements = Object.entries(response.data).reverse() //esto combierte objetos en arreglos
@@ -33,7 +38,7 @@ function Home(){
             }).catch((error) => {
                 alert(error)
             })
-    },[])
+    },[isOpen,isOpenDelete])
 
     return(
         <div className="App">
@@ -55,6 +60,14 @@ function Home(){
                                     nombre={todo.user}  
                                     todo={todo.todo}
                                     prioridad={todo.prioridad}
+                                    edit={ () => { 
+                                        setCurrentTodo(todo); 
+                                        setIsOpen(true) 
+                                    }}
+                                    delete={() => {
+                                        setCurrentTodo(todo); 
+                                        setIsOpenDelete(true) 
+                                    }}
                                 />
                             )
                         }) }
@@ -67,6 +80,14 @@ function Home(){
                                     nombre={todo.user}  
                                     todo={todo.todo}
                                     prioridad={todo.prioridad}
+                                    edit={() => { 
+                                        setCurrentTodo(todo); 
+                                        setIsOpen(true) 
+                                    }}
+                                    delete={() => {
+                                        setCurrentTodo(todo); 
+                                        setIsOpenDelete(true) 
+                                    }}
                                 />
                             )
                         }) }
@@ -79,6 +100,14 @@ function Home(){
                                     nombre={todo.user}  
                                     todo={todo.todo}
                                     prioridad={todo.prioridad}
+                                    edit={() => { 
+                                        setCurrentTodo(todo); 
+                                        setIsOpen(true) 
+                                    }}
+                                    delete={() => {
+                                        setCurrentTodo(todo); 
+                                        setIsOpenDelete(true) 
+                                    }}
                                 />
                             )
                         }) }
@@ -86,6 +115,8 @@ function Home(){
 
                 </div>
             </div>
+            <ModalEdit open={isOpen} close={setIsOpen} todo={currentTodo} />
+            <ModalDelete open={isOpenDelete} close={setIsOpenDelete} todo={currentTodo} />
         </div>
     )
 
